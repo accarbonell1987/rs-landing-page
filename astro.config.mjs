@@ -8,4 +8,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind(), react()],
   site: "https://accarbonell1987.github.io",
+  base: "",
 });
