@@ -1,8 +1,8 @@
 ---
-const {
-  rasenLogo = "/rs-landing-page/rasen_o_logo.svg",
-  rasenText = "Rasen Solution",
-} = Astro.props;
+const { rasenText = "Rasen Solution" } = Astro.props;
+
+const prefix = import.meta.env.DEV ? `/rs-landing-page` : "";
+const rasenLogo = `${prefix}/rasen_o_logo.svg`;
 ---
 
 <div

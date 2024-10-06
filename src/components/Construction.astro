@@ -1,9 +1,11 @@
 ---
-const { image = "/rs-landing-page/construction.svg", allowSubscition = false } =
-  Astro.props;
+const { allowSubscition = false } = Astro.props;
 import { Button, Input } from "@nextui-org/react";
 import { MoodAnnoyed } from "tabler-icons-react";
 import { ButtonSizes } from "../statics/enums";
+
+const prefix = import.meta.env.DEV ? `/rs-landing-page` : "";
+const image = `${prefix}/construction.svg`;
 ---
 
 <div
