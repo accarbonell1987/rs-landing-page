@@ -7,6 +7,6 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), react()],
-  site: "https://Rasen-Solution.github.io",
+  site: "https://accarbonell1987.github.io",
   base: "rs-landing-page",
 });
