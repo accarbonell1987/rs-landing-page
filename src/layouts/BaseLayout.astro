@@ -1,0 +1,31 @@
+---
+import "./styles.css";
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Seguro de Autos" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/fav.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="flex min-h-dvh min-w-full flex-col gap-6">
+      <header
+        class="fixed left-0 right-0 top-0 z-[100] flex flex-row items-center justify-start"
+      >
+        <slot name="toolbar" />
+      </header>
+      <main
+        class="mb-16 flex flex-grow items-start justify-center overflow-y-auto"
+      >
+        <slot name="body" />
+      </main>
+      <footer class="bottom-0 left-0 right-0 w-full md:fixed">
+        <slot name="footer" />
+      </footer>
+    </div>
+  </body>
+</html>

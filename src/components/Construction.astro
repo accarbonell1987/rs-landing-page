@@ -1,0 +1,55 @@
+---
+const {
+  image = "/construction.svg",
+  face = "./moodsad.svg",
+  allowSubscition = false,
+} = Astro.props;
+import { Button, Input } from "@nextui-org/react";
+import { MoodAnnoyed } from "tabler-icons-react";
+import { ButtonSizes } from "../statics/enums";
+---
+
+<div
+  class="flex w-full flex-col items-center justify-center p-2 pt-24 md:flex-row"
+>
+  <div
+    class="order-last flex flex-col items-center justify-center gap-4 p-2 md:order-1 xl:gap-8"
+  >
+    <div class="flex flex-row items-center justify-center gap-6">
+      <div class="flex flex-col items-start justify-center gap-3">
+        <div class="flex flex-row items-center justify-start gap-3">
+          <MoodAnnoyed size={100} />
+          <h1 class="">Sorry...</h1>
+        </div>
+        <h4>
+          This site is under construction, the dark elves are doing the job...
+        </h4>
+      </div>
+    </div>
+    {
+      allowSubscition && (
+        <div class="flex w-full flex-col items-center justify-center gap-3 md:items-start">
+          <p>Subscribe here and we'll notify you as soon as we open</p>
+          <div class="flex w-full flex-col flex-wrap items-center justify-start gap-3 md:flex-row">
+            <div class="w-full max-w-[400px]">
+              <Input
+                size={ButtonSizes.Small}
+                type="email"
+                label="Email"
+                client:visible
+              />
+            </div>
+            <Button color="secondary" variant="shadow">
+              Subscribe
+            </Button>
+          </div>
+        </div>
+      )
+    }
+  </div>
+  <img
+    class="order-1 h-[200px] min-h-[200px] md:h-[400px] lg:h-full xl:order-last"
+    src={image}
+    alt="Construction"
+  />
+</div>

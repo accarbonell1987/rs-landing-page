@@ -1,0 +1,22 @@
+---
+const { rasenLogo = "/rasen_o_logo.svg", rasenText = "Rasen Solution" } =
+  Astro.props;
+---
+
+<div
+  class="toolbar-background flex w-full flex-row items-center justify-center gap-6 border-b-1 border-[rgb(255,102,0)] p-6 md:justify-start md:border-b-0"
+>
+  <img class="h-[24px] md:h-[36px]" src={rasenLogo} alt="Rasen Solution" />
+  <span class="h-[24px] w-0 border-r-1 border-[rgb(255,102,0)] md:h-[54px]"
+  ></span>
+  <p class="text-left font-['Rexton'] text-black sm:text-2xl">
+    {rasenText}
+  </p>
+</div>
+
+<style>
+  .toolbar-background {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+  }
+</style>
